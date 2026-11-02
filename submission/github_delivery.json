@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/Hyunlulu/agibot-toy2box-imitation-learning",
+  "visibility": "public",
+  "release_url": "https://github.com/Hyunlulu/agibot-toy2box-imitation-learning/releases/tag/training-data-v1",
+  "training_archive_download": "https://github.com/Hyunlulu/agibot-toy2box-imitation-learning/releases/download/training-data-v1/Agibot_Toy2Box_._20261102.zip",
+  "training_archive_bytes": 175301149,
+  "training_archive_sha256": "ff38254a71ed55d9dc751809435c4c3d641d6e494966a089aad4b775565449a3",
+  "release_digest_verified": true,
+  "public_checkpoint_download_sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
+  "public_checkpoint_bytes": 7953670,
+  "final_checkpoint_count": 1,
+  "remote_full_tree_matches_local": true
+}

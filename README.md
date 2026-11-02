@@ -53,7 +53,7 @@ python -m pip install -r requirements-agibot.txt
 
 ## 증강과 재학습
 
-`submission_data/`에는 동일한 최종 사람 시범100개와 자동 주석본을 포함합니다. 체크섬은 `submission/data_manifest.json` 참조. 최종5D 학습 데이터는 용량 때문에 별도 `Agibot_Toy2Box_재학습데이터_20261102.zip`으로 준비했습니다. 이 ZIP을 프로젝트 최상위에서 풀면 `datasets/`가 생성됩니다. 게시 후 Release에 올린 파일을 사용합니다. Release 업로드 전에는 다운로드가 제공되지 않는 상태입니다.
+`submission_data/`에는 동일한 최종 사람 시범100개와 자동 주석본을 Git LFS로 포함합니다. 복제 후 `git lfs install`과 `git lfs pull`을 실행해 실제 HDF5를 받습니다(Git LFS 설치 필요). 체크섬은 `submission/data_manifest.json` 참조. 최종5D 학습 데이터는 용량 때문에 별도 `Agibot_Toy2Box_재학습데이터_20261102.zip`으로 준비했습니다. 이 ZIP을 프로젝트 최상위에서 풀면 `datasets/`가 생성됩니다. [공개 Release에서 재학습 데이터 ZIP 다운로드](https://github.com/Hyunlulu/agibot-toy2box-imitation-learning/releases/tag/training-data-v1).
 
 생성부터 반복하려면 다음 명령을 사용합니다. 병렬 환경16개에서 **성공 시범1000개**가 모일 때까지 생성하고, 노이즈 적용 뒤 실제 실행 명령의 두 회전을0으로 제한합니다. 실패 시범은 학습에 사용하지 않습니다.
 
