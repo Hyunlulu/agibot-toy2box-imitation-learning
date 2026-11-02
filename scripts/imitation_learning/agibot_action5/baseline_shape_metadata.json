@@ -1,0 +1,37 @@
+{
+  "ac_dim": 7,
+  "all_shapes": {
+    "box_orientations": [
+      4
+    ],
+    "box_positions": [
+      3
+    ],
+    "eef_pos": [
+      3
+    ],
+    "eef_quat": [
+      4
+    ],
+    "gripper_pos": [
+      2
+    ],
+    "toy_truck_orientations": [
+      4
+    ],
+    "toy_truck_positions": [
+      3
+    ]
+  },
+  "all_obs_keys": [
+    "box_orientations",
+    "box_positions",
+    "eef_pos",
+    "eef_quat",
+    "gripper_pos",
+    "toy_truck_orientations",
+    "toy_truck_positions"
+  ],
+  "use_images": false,
+  "use_depths": false
+}

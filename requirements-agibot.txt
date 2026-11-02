@@ -1,0 +1,6 @@
+# Install after the IsaacSim 5.1 / IsaacLab v2.3.0 environment is ready.
+robomimic==0.4.0
+gymnasium==1.2.0
+h5py==3.16.0
+imageio-ffmpeg==0.6.0
+# Tested torch: 2.7.0+cu128; use the CUDA build matching your driver.

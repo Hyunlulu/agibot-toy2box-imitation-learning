@@ -1,0 +1,45 @@
+{
+  "raw_successes": 1000,
+  "training_demos": 1000,
+  "total_training_steps": 262657,
+  "length_min_mean_max": [
+    213,
+    262.657,
+    363
+  ],
+  "training_dataset": "/home/jh/IsaacLab_RS/datasets/toy2box_agibot_100_v2_action5_mimic_1000_train.hdf5",
+  "training_dataset_sha256": "292db1bae205f2c62ec7dfa6d0ef331a7ea8b4a53136c9c1d62b92958b7439b5",
+  "constrained_raw_dataset": "/home/jh/IsaacLab_RS/datasets/toy2box_agibot_100_v2_action5_mimic_1000_env16.hdf5",
+  "constrained_raw_sha256": "04f071d74fa37158c34993dcff3a2c3b0ed9f285844b7aeba5d83f90e21aac1a",
+  "policy_action_dimension": 5,
+  "environment_action_dimension": 7,
+  "kept_action_indices": [
+    0,
+    1,
+    2,
+    4,
+    6
+  ],
+  "all_recorded_removed_rotation_commands_exactly_zero": true,
+  "all_finite": true,
+  "all_success_labels": true,
+  "observations_preserved": true,
+  "generation": {
+    "successes": 1000,
+    "attempts": 2843,
+    "failures": 1843,
+    "wall_time_seconds": 5416.026984930038,
+    "parallel_envs": 16,
+    "target_successes": 1000,
+    "target_attempts": null,
+    "completed": true,
+    "policy_action_dimension": 5,
+    "environment_action_dimension": 7,
+    "constraint_stats": {
+      "projected_action_calls": 765536,
+      "guarded_step_calls": 47846,
+      "max_executed_removed_abs": 0.0
+    }
+  },
+  "failed_file": "/home/jh/IsaacLab_RS/datasets/toy2box_agibot_100_v2_action5_mimic_1000_env16_failed.hdf5"
+}

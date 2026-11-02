@@ -1,0 +1,37 @@
+{
+  "unit_tests": 25,
+  "unit_tests_status": "passed",
+  "gpu_smoke_rollouts": 3,
+  "gpu_smoke_horizon": 800,
+  "evaluation_seed": 42,
+  "original_first3_success_steps": [
+    [
+      false,
+      800
+    ],
+    [
+      true,
+      225
+    ],
+    [
+      true,
+      261
+    ]
+  ],
+  "new_first3_match_original_exactly": true,
+  "smoke_is_not_additional_reported_evaluation": true,
+  "policy_dimension": 5,
+  "environment_dimension": 7,
+  "observation_dimension": 23,
+  "checkpoint_sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
+  "checkpoint_count": 1,
+  "entry_point": "scripts/imitation_learning/robomimic/play.py",
+  "supports_arbitrary_eval_seed": true,
+  "machine_specific_paths_removed": true,
+  "code_review": "independent final review; all findings corrected",
+  "review_fixes": [
+    "canonical generation targets and duplicate arguments preserve existing HDF5",
+    "actual production parallel_envs fixed to16",
+    "5D raw-action policy rejects normalization flags that would change zero rotations"
+  ]
+}

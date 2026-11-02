@@ -1,0 +1,20 @@
+[
+  {
+    "file": "submission_data/source100_usable.hdf5",
+    "sha256": "9973c37e720c2acabb644769f5ff11deb84253737a3cb34f8ea040d49d80160e",
+    "bytes": 23564847,
+    "role": "100 human demonstrations"
+  },
+  {
+    "file": "submission_data/source100_annotated.hdf5",
+    "sha256": "e7b8f33a0b8bf1fb98a6e654f6e4885dd95d4592d044f9cec0f5dfcc6651be19",
+    "bytes": 28975133,
+    "role": "automatically annotated 100 human demonstrations"
+  },
+  {
+    "file": "datasets/toy2box_agibot_100_v2_action5_mimic_1000_train.hdf5",
+    "sha256": "292db1bae205f2c62ec7dfa6d0ef331a7ea8b4a53136c9c1d62b92958b7439b5",
+    "bytes": 263721456,
+    "role": "1000 successful 5D learning trajectories; separate retraining archive"
+  }
+]

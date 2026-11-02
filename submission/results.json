@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "policy_action_dimension": 5,
+  "environment_action_dimension": 7,
+  "source_dataset": "/home/jh/IsaacLab_RS/datasets/toy2box_agibot_100_v2_usable.hdf5",
+  "source_sha256": "9973c37e720c2acabb644769f5ff11deb84253737a3cb34f8ea040d49d80160e",
+  "source_episodes": 100,
+  "input_source_episodes": 100,
+  "excluded_source_episodes": [],
+  "excluded_collection_numbers": [],
+  "criteria_changed": false,
+  "training_dataset": "/home/jh/IsaacLab_RS/datasets/toy2box_agibot_100_v2_action5_mimic_1000_train.hdf5",
+  "training_demos": 1000,
+  "training_epochs": 2000,
+  "training_seeds": [
+    101,
+    111
+  ],
+  "evaluation_seed": 42,
+  "num_rollouts_per_seed": 100,
+  "horizon": 800,
+  "per_seed": [
+    {
+      "training_seed": 101,
+      "successes": 72,
+      "success_rate": 0.72,
+      "checkpoint": "/home/jh/IsaacLab_RS/logs/agibot_pipeline/source100_v2_action5/training/Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0/bc_rnn_toy2box_source100_v2_action5_mimic1000_seed101/20261029104915/models/model_epoch_2000.pth",
+      "videos": "/home/jh/IsaacLab_RS/logs/agibot_pipeline/source100_v2_action5/videos/seed101"
+    },
+    {
+      "training_seed": 111,
+      "successes": 70,
+      "success_rate": 0.7,
+      "checkpoint": "/home/jh/IsaacLab_RS/logs/agibot_pipeline/source100_v2_action5/training/Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0/bc_rnn_toy2box_source100_v2_action5_mimic1000_seed111/20261029111405/models/model_epoch_2000.pth",
+      "videos": "/home/jh/IsaacLab_RS/logs/agibot_pipeline/source100_v2_action5/videos/seed111"
+    }
+  ],
+  "success_rate_mean": 0.71,
+  "success_rate_std_population": 0.010000000000000009,
+  "wall_time_seconds": 14850.06833600998
+}

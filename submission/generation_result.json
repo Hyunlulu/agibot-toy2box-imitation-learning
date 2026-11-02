@@ -1,0 +1,17 @@
+{
+  "successes": 1000,
+  "attempts": 2843,
+  "failures": 1843,
+  "wall_time_seconds": 5416.026984930038,
+  "parallel_envs": 16,
+  "target_successes": 1000,
+  "target_attempts": null,
+  "completed": true,
+  "policy_action_dimension": 5,
+  "environment_action_dimension": 7,
+  "constraint_stats": {
+    "projected_action_calls": 765536,
+    "guarded_step_calls": 47846,
+    "max_executed_removed_abs": 0.0
+  }
+}
