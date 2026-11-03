@@ -1,0 +1,28 @@
+{
+  "requirements_source": "User-provided LMS notice, confirmed 2026-11-03",
+  "required_training_seeds": [
+    101,
+    111
+  ],
+  "required_final_weights": 2,
+  "checkpoint_epoch": 2000,
+  "commands": [
+    {
+      "training_seed": 101,
+      "checkpoint": "./checkpoints/final_seed101_epoch2000.pth",
+      "num_rollouts": 100,
+      "horizon": 800,
+      "evaluation_seed": 42,
+      "results_file": "./artifacts/eval_train101_seed42.json"
+    },
+    {
+      "training_seed": 111,
+      "checkpoint": "./checkpoints/final_seed111_epoch2000.pth",
+      "num_rollouts": 100,
+      "horizon": 800,
+      "evaluation_seed": 42,
+      "results_file": "./artifacts/eval_train111_seed42.json"
+    }
+  ],
+  "runtime_code_changed": false
+}

@@ -9,7 +9,7 @@ IsaacLab v2.3.0 기반 로보틱스 시뮬레이션 수업 프로젝트. 사람 
 |101|42|72/100|72%|
 |111|42|70/100|70%|
 
-두 모델 평균71%, 시드 간 모집단 SD1%p(n=2). 각 모델은 최종 epoch2000, horizon800으로 평가했습니다. 제출 지침에 따라 가중치는 **101 시드의 최종 모델1개만** 포함합니다. 111 시드의 원본 결과 JSON은 `submission/`에 보존했습니다. 알려진 검증 시드42에서의 결과이며 미공개 시드 성능을 보장하지 않습니다.
+두 모델 평균71%, 시드 간 모집단 SD1%p(n=2). 각 모델은 최종 epoch2000, horizon800으로 평가했습니다. 최신 LMS 공지(2026-11-03 확인)에 따라 **101·111 시드의 최종 epoch2000 모델 2개만** `checkpoints/`에 포함합니다. 두 시드의 원본 평가 결과 JSON은 `submission/`에 보존했습니다. 알려진 검증 시드42에서의 결과이며 미공개 시드 성능을 보장하지 않습니다.
 
 ## 실행 환경
 
@@ -30,20 +30,30 @@ python -m pip install -r requirements-agibot.txt
 프로젝트 최상위 폴더에서 실행합니다.
 
 ```bash
+# 학습 시드 101의 최종 epoch 2000 모델
 ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py \
   --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
   --checkpoint ./checkpoints/final_seed101_epoch2000.pth \
   --num_rollouts 100 --horizon 800 --seed 42 --headless \
-  --results_file ./artifacts/eval_seed42.json
+  --results_file ./artifacts/eval_train101_seed42.json
+
+# 학습 시드 111의 최종 epoch 2000 모델
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --checkpoint ./checkpoints/final_seed111_epoch2000.pth \
+  --num_rollouts 100 --horizon 800 --seed 42 --headless \
+  --results_file ./artifacts/eval_train111_seed42.json
 ```
 
-`--seed`는 평가자가 원하는 값으로 바꿀 수 있습니다. 기존 결과 파일은 덮어쓰지 않으므로 재평가 시 새 `--results_file`을 사용합니다. 가중치만 있으면 평가할 수 있으며 HDF5는 평가에 필요하지 않습니다.
+두 명령은 **각각 100회씩, 총 200회** 평가합니다. 학습 시드는 가중치 파일로 구분하며, 두 명령의 `--seed 42`는 공통 **평가 시드**입니다. `--results_file`도 모델별로 분리했습니다. `--seed`는 평가자가 원하는 값으로 바꿀 수 있습니다. 기존 결과 파일은 덮어쓰지 않으므로 재평가 시 새 `--results_file`을 사용합니다. 가중치만 있으면 평가할 수 있으며 HDF5는 평가에 필요하지 않습니다.
 
 영상 녹화에는 위 명령에 다음 옵션을 추가합니다. 640×480, 원속도20fps로 프레임을 즉시 인코딩합니다.
 
 ```bash
---video --video_length 1000 --video_folder ./artifacts/videos/seed42
+--video --video_length 1000 --video_folder ./artifacts/videos/train101_seed42
 ```
+
+111 모델 녹화에는 `--video_folder ./artifacts/videos/train111_seed42`처럼 별도 폴더를 사용합니다.
 
 ## 5D 행동 표현
 

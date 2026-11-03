@@ -8,6 +8,29 @@
   "release_digest_verified": true,
   "public_checkpoint_download_sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
   "public_checkpoint_bytes": 7953670,
-  "final_checkpoint_count": 1,
-  "remote_full_tree_matches_local": true
+  "final_checkpoint_count": 2,
+  "remote_full_tree_matches_local": true,
+  "lms_requirements_checked_on": "2026-11-03",
+  "submitted_checkpoints": [
+    {
+      "training_seed": 101,
+      "epoch": 2000,
+      "path": "checkpoints/final_seed101_epoch2000.pth",
+      "bytes": 7953670,
+      "sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
+      "policy_action_dimension": 5,
+      "observation_dimension": 23,
+      "real_checkpoint_load_and_inference": "passed"
+    },
+    {
+      "training_seed": 111,
+      "epoch": 2000,
+      "path": "checkpoints/final_seed111_epoch2000.pth",
+      "bytes": 7953670,
+      "sha256": "3ce42477be768683a92cec4f7f908e9fb5c3bb0cdde5af94f6c92802def95f9e",
+      "policy_action_dimension": 5,
+      "observation_dimension": 23,
+      "real_checkpoint_load_and_inference": "passed"
+    }
+  ]
 }

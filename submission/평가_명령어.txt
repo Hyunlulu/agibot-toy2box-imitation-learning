@@ -1,10 +1,23 @@
 # 프로젝트 최상위 폴더 / IsaacLab 환경 활성화 후 실행
+# 최신 LMS 공지: 학습 시드 101·111 최종 모델 2개 제출
+
+# 학습 시드 101의 최종 epoch 2000 모델
 ./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py \
   --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
   --checkpoint ./checkpoints/final_seed101_epoch2000.pth \
   --num_rollouts 100 --horizon 800 --seed 42 --headless \
-  --results_file ./artifacts/eval_seed42.json
+  --results_file ./artifacts/eval_train101_seed42.json
 
+# 학습 시드 111의 최종 epoch 2000 모델
+./isaaclab.sh -p scripts/imitation_learning/robomimic/play.py \
+  --task Isaac-Place-Toy2Box-Agibot-Right-Arm-RmpFlow-v0 \
+  --checkpoint ./checkpoints/final_seed111_epoch2000.pth \
+  --num_rollouts 100 --horizon 800 --seed 42 --headless \
+  --results_file ./artifacts/eval_train111_seed42.json
+
+# 두 명령을 각각 실행: 모델당 100회, 총 200회 평가.
+# 학습 시드 101/111은 checkpoint로 구분하며, --seed 42는 공통 평가 시드입니다.
 # 평가자는 --seed를 변경할 수 있습니다.
 # 재평가할 때는 --results_file에 기존에 없는 새 파일명을 지정합니다.
-# video 선택: --video --video_length 1000 --video_folder ./artifacts/videos/seed42
+# 영상 선택: --video --video_length 1000 --video_folder ./artifacts/videos/train101_seed42
+# 111 모델 녹화 시에는 --video_folder도 ./artifacts/videos/train111_seed42처럼 구분합니다.

@@ -23,8 +23,7 @@
   "policy_dimension": 5,
   "environment_dimension": 7,
   "observation_dimension": 23,
-  "checkpoint_sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
-  "checkpoint_count": 1,
+  "checkpoint_count": 2,
   "entry_point": "scripts/imitation_learning/robomimic/play.py",
   "supports_arbitrary_eval_seed": true,
   "machine_specific_paths_removed": true,
@@ -33,5 +32,34 @@
     "canonical generation targets and duplicate arguments preserve existing HDF5",
     "actual production parallel_envs fixed to16",
     "5D raw-action policy rejects normalization flags that would change zero rotations"
-  ]
+  ],
+  "gpu_smoke_training_seed": 101,
+  "lms_requirements_checked_on": "2026-11-03",
+  "checkpoint_training_seeds": [
+    101,
+    111
+  ],
+  "checkpoints": [
+    {
+      "training_seed": 101,
+      "epoch": 2000,
+      "path": "checkpoints/final_seed101_epoch2000.pth",
+      "bytes": 7953670,
+      "sha256": "ee168807875b93076946a60ca8b04ce6edf79a37cc5d7b092f5070ec5de6bccc",
+      "policy_action_dimension": 5,
+      "observation_dimension": 23,
+      "real_checkpoint_load_and_inference": "passed"
+    },
+    {
+      "training_seed": 111,
+      "epoch": 2000,
+      "path": "checkpoints/final_seed111_epoch2000.pth",
+      "bytes": 7953670,
+      "sha256": "3ce42477be768683a92cec4f7f908e9fb5c3bb0cdde5af94f6c92802def95f9e",
+      "policy_action_dimension": 5,
+      "observation_dimension": 23,
+      "real_checkpoint_load_and_inference": "passed"
+    }
+  ],
+  "checkpoint_load_and_inference": "passed_for_both_seeds"
 }
